@@ -78,14 +78,6 @@ const noman = {
 
 <img src="https://streak-stats.demolab.com?user=noman-h&theme=nord&border=7dd3fc&ring=7dd3fc&fire=7dd3fc&currStreakLabel=7dd3fc&hide_border=false" alt="Streak stats" />
 
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=noman-h&theme=nord&no-frame=true&no-bg=true&row=1&column=7" alt="Trophies" />
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=noman-h&bg_color=2e3440&color=7dd3fc&line=7dd3fc&point=ffffff&area=true&hide_border=true" alt="Contribution graph" />
-
 </div>
 
 ---
