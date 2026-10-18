@@ -45,7 +45,7 @@ const noman = {
 
 🔗 [Code](https://github.com/noman-h/CrowdSight)
 
----
+----
 
 ## 🛠️ Tech Stack
 
