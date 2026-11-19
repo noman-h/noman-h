@@ -1,0 +1,70 @@
+name: Refresh profile cards
+
+on:
+  schedule:
+    - cron: "17 0 * * *"        # daily, 00:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/render_cards.py
+      - assets/**
+      - .github/workflows/cards.yml
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      LOGIN: noman-h
+      FEATURED: "CheckinnPro CrowdSight"
+      # Optional: a classic PAT (read:user) in GH_STATS_TOKEN also counts private contributions
+      # if you've enabled them on your profile. Falls back to the built-in token.
+      GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh data/github.json
+        run: |
+          mkdir -p data
+          FROM=$(date -u -d '364 days ago' +%Y-%m-%dT00:00:00Z)
+          TO=$(date -u +%Y-%m-%dT23:59:59Z)
+          gh api graphql -f login="$LOGIN" -f from="$FROM" -f to="$TO" -f query='
+            query($login:String!,$from:DateTime!,$to:DateTime!){
+              user(login:$login){
+                contributionsCollection(from:$from,to:$to){
+                  contributionCalendar{ weeks{ contributionDays{ date contributionCount } } }
+                }
+              }
+            }' \
+            --jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[]
+                   | {date, count: .contributionCount}]' > /tmp/days.json
+          for r in $FEATURED; do
+            gh api "repos/$LOGIN/$r" --jq '{name, description, stars: .stargazers_count,
+                                            forks: .forks_count, language, url: .html_url}'
+          done | jq -s '.' > /tmp/repos.json
+          jq -n --arg login "$LOGIN" --arg at "$(date -u +%FT%TZ)" \
+             --slurpfile days /tmp/days.json --slurpfile repos /tmp/repos.json \
+             '{login:$login, generated:$at, days:$days[0], repos:$repos[0]}' > data/github.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools and font
+        run: |
+          pip install fonttools pillow
+          test -f fonts/FiraCode-VF.ttf || curl -fsSL --create-dirs -o fonts/FiraCode-VF.ttf \
+            "https://raw.githubusercontent.com/google/fonts/main/ofl/firacode/FiraCode%5Bwght%5D.ttf"
+
+      - name: Render cards
+        run: python scripts/render_cards.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github.json cards
+          git diff --cached --quiet || { git commit -m "chore: refresh profile cards" && git push; }
