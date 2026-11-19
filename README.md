@@ -1,96 +1,25 @@
-<div align="center">
+<p align="center">
+  <img src="cards/hero.svg" width="100%" alt="Noman H, MERN full stack developer building with Next.js and SQL" />
+</p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=220&section=header&text=Noman%20H&fontSize=60&fontColor=7dd3fc&desc=MERN%20Full%20Stack%20Developer&descSize=22&descAlignY=65&animation=twinkling" width="100%" alt="header" />
+<p align="center">
+  <a href="https://www.linkedin.com/in/noman-h/"><img src="cards/tile-linkedin.svg" width="32.5%" alt="LinkedIn: in/noman-h" /></a>
+  <a href="https://x.com/Nomaan_21"><img src="cards/tile-x.svg" width="32.5%" alt="X: @Nomaan_21" /></a>
+  <a href="https://github.com/noman-h?tab=repositories"><img src="cards/tile-github.svg" width="32.5%" alt="GitHub: all repositories" /></a>
+</p>
 
-<a href="https://github.com/noman-h">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7dd3fc&center=true&vCenter=true&width=600&lines=MERN+Full+Stack+Developer;Building+with+Next.js+%26+SQL;Creator+of+CheckinnPro+%26+CrowdSight;C%2B%2B+%7C+JavaScript+%7C+React+%7C+Node.js" alt="Typing SVG" />
-</a>
+<p align="center">
+  <img src="cards/activity.svg" width="100%" alt="Contributions per month, with current streak, active days and busiest day" />
+</p>
 
-<br/>
+<p align="center">
+  <a href="https://github.com/noman-h/CheckinnPro"><img src="cards/repo-checkinnpro.svg" width="100%" alt="CheckinnPro repository" /></a>
+</p>
 
-<img src="https://komarev.com/ghpvc/?username=noman-h&label=Profile+Views&color=7dd3fc&style=for-the-badge" alt="Profile views" />
-<img src="https://img.shields.io/github/followers/noman-h?label=Followers&style=for-the-badge&logo=github&color=7dd3fc&labelColor=1e293b" alt="Followers" />
+<p align="center">
+  <a href="https://github.com/noman-h/CrowdSight"><img src="cards/repo-crowdsight.svg" width="100%" alt="CrowdSight repository" /></a>
+</p>
 
-</div>
-
----
-
-## 👨‍💻 Who I Am
-
-```typescript
-const noman = {
-  title: "MERN Full Stack Developer",
-  stack: ["MongoDB", "Express", "React", "Node.js", "Next.js", "SQL", "C++", "JavaScript"],
-  launchedProjects: ["CheckinnPro", "CrowdSight"],
-};
-```
-
----
-
-## 🚀 Featured Projects
-
-### CheckinnPro
-
-<a href="https://github.com/noman-h/CheckinnPro">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=noman-h&repo=CheckinnPro&theme=nord&border_color=7dd3fc&title_color=7dd3fc&icon_color=7dd3fc&text_color=e2e8f0" alt="CheckinnPro" />
-</a>
-
-🔗 [Code](https://github.com/noman-h/CheckinnPro)
-
-### CrowdSight
-
-<a href="https://github.com/noman-h/CrowdSight">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=noman-h&repo=CrowdSight&theme=nord&border_color=7dd3fc&title_color=7dd3fc&icon_color=7dd3fc&text_color=e2e8f0" alt="CrowdSight" />
-</a>
-
-🔗 [Code](https://github.com/noman-h/CrowdSight)
-
-----
-
-## 🛠️ Tech Stack
-
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=js,cpp" alt="Languages" />
-
-**Frontend**
-
-<img src="https://skillicons.dev/icons?i=react,nextjs" alt="Frontend" />
-
-**Backend**
-
-<img src="https://skillicons.dev/icons?i=nodejs,express" alt="Backend" />
-
-**Databases**
-
-<img src="https://skillicons.dev/icons?i=mongodb,mysql" alt="Databases" />
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=noman-h&show_icons=true&theme=nord&border_color=7dd3fc&title_color=7dd3fc&icon_color=7dd3fc&text_color=e2e8f0&hide_border=false" alt="GitHub stats" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=noman-h&layout=compact&theme=nord&border_color=7dd3fc&title_color=7dd3fc&text_color=e2e8f0" alt="Top languages" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=noman-h&theme=nord&border=7dd3fc&ring=7dd3fc&fire=7dd3fc&currStreakLabel=7dd3fc&hide_border=false" alt="Streak stats" />
-
-</div>
-
----
-
-## 🤝 Connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/noman-h/"><img src="https://img.shields.io/badge/LinkedIn-1e293b?style=for-the-badge&logo=linkedin&logoColor=7dd3fc" alt="LinkedIn" /></a>
-<a href="https://x.com/Nomaan_21"><img src="https://img.shields.io/badge/X-1e293b?style=for-the-badge&logo=x&logoColor=7dd3fc" alt="X" /></a>
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=120&section=footer" width="100%" alt="footer" />
-
-</div>
+<p align="center">
+  <img src="cards/graph.svg" width="100%" alt="Contribution graph for the last year" />
+</p>
